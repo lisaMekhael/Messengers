@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pop-up Message</title>
+    <style>
+        /* Style for the pop-up */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        /* Style for the bold text */
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button id="showPopup">Show Pop-up</button>
+
+    <div class="popup" id="popup">
+        <p>
+            God can use you to your full potential.
+            Besides you are not the message, you are just the <span class="bold">messenger</span>.
+            God is waiting to use your full potential.
+        </p>
+        <button id="closePopup">Close</button>
+    </div>
+
+    <script>
+        // Get references to the elements
+        const showPopupButton = document.getElementById('showPopup');
+        const popup = document.getElementById('popup');
+        const closePopupButton = document.getElementById('closePopup');
+
+        // Show the pop-up when the button is clicked
+        showPopupButton.addEventListener('click', () => {
+            popup.style.display = 'block';
+        });
+
+        // Close the pop-up when the close button is clicked
+        closePopupButton.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

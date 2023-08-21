@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +5,7 @@
     <style>
         /* Style for the pop-up */
         .popup {
-            display: none;
+            display: block;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -26,30 +25,20 @@
     </style>
 </head>
 <body>
-    <button id="showPopup">Show Pop-up</button>
-
     <div class="popup" id="popup">
         <p>
             God can use you to your full potential.
             Besides you are not the message, you are just the <span class="bold">messenger</span>.
             God is waiting to use your full potential.
         </p>
-        <button id="closePopup">Close</button>
     </div>
 
     <script>
-        // Get references to the elements
-        const showPopupButton = document.getElementById('showPopup');
+        // Get a reference to the pop-up element
         const popup = document.getElementById('popup');
-        const closePopupButton = document.getElementById('closePopup');
 
-        // Show the pop-up when the button is clicked
-        showPopupButton.addEventListener('click', () => {
-            popup.style.display = 'block';
-        });
-
-        // Close the pop-up when the close button is clicked
-        closePopupButton.addEventListener('click', () => {
+        // Close the pop-up when clicked
+        popup.addEventListener('click', () => {
             popup.style.display = 'none';
         });
     </script>
